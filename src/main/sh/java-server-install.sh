@@ -47,7 +47,7 @@ TOMCAT_INSTALLATION_STATUS=$?
 if [ $TOMCAT_INSTALLATION_STATUS -eq 0 ]
 then
     echo "tomcat server is installed, configuring it as an ubuntu service"
-    configureTomcatService
+    #configureTomcatService
 fi
 
 
