@@ -15,7 +15,7 @@ function checkAndInstallJdk() {
 }
 
 function setupTomcat() {
-    if [ -d /u01/data/apache-tomcat-9.0.43 ]   
+    if [ -d /u01/data/apache-tomcat-9.0.46 ]   
     then
         echo "found tomcat server installation, so skipping..."
         return 1
@@ -23,11 +23,11 @@ function setupTomcat() {
         sudo mkdir -p /u01/data
         sudo chown -R vagrant:vagrant /u01/
         sudo chmod -R 755 /u01        
-        wget https://mirrors.estointernet.in/apache/tomcat/tomcat-9/v9.0.43/bin/apache-tomcat-9.0.43.tar.gz -P /u01/data
+        wget https://apachemirror.wuchna.com/tomcat/tomcat-9/v9.0.46/bin/apache-tomcat-9.0.46.tar.gz -P /u01/data
         cd /u01/data
-        gunzip apache-tomcat-9.0.43.tar.gz
-        tar -xvf apache-tomcat-9.0.43.tar
-        rm apache-tomcat-9.0.43.tar
+        gunzip apache-tomcat-9.0.46.tar.gz
+        tar -xvf apache-tomcat-9.0.46.tar
+        rm apache-tomcat-9.0.46.tar
         sudo chown -R vagrant:vagrant /u01/data
         sudo chmod -R 755 /u01/data        
         echo "apache tomcat server installed"
