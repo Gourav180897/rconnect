@@ -6,6 +6,12 @@
 
 # BlueJ files
 *.ctxt
+.settings
+.metadata
+.project
+.classpath
+.mvn
+target/
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
