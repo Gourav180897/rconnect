@@ -1,11 +1,20 @@
 pipeline {
     agent any
     stages {
-        stage ('checkout scm'){
-            echo 'pulling code from scm'
+        stage('Checkout SCM') {
+            steps {
+                echo 'Pulling code from SCM'
+                // Add your SCM checkout steps here
+            }
         }
-        stage ('build'){
-            echo 'mvn clean verify'
+        stage('Build') {
+            steps {
+                echo 'Running "mvn clean verify"'
+                // Add your build steps here, such as 'mvn clean verify'
+            }
         }
+        // Add more stages as needed
     }
+    
+    // Post-build actions or other configurations
 }
